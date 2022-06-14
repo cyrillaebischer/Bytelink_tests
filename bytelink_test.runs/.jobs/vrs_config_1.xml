@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_bytelink_0_0_synth_1" LaunchDir="C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.runs/design_1_bytelink_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_bytelink_1_0_synth_1" LaunchDir="C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.runs/design_1_bytelink_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_clk_wiz_0_0_synth_1" LaunchDir="C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.runs/design_1_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Eval_bl_0_synth_1" LaunchDir="C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.runs/design_1_Eval_bl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_GULF_bl_0_synth_1" LaunchDir="C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.runs/design_1_GULF_bl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_Eval_bl_0_synth_1"/>
+	</Run>
+</Runs>
+

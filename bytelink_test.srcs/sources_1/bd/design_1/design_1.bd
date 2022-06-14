@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xA4C59F20C4550A9D" bd:device="xc7z020clg400-3" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>GULF_Din</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>GULF_Din_valid</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>Eval_Din</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>Eval_Din_valid</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>GULF_Dout_valid</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>GULF_Dout</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>Eval_Dout_valid</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>Eval_Dout</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rst_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clk_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rstX5_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="6.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_clk_wiz_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLK_OUT1_PORT">clk_sst</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLK_OUT2_PORT">clk_5xsst</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">125</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="USE_LOCKED">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">40.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">175.402</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">125.247</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">98.575</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Eval_bl</spirit:instanceName>
+        <spirit:componentRef spirit:library="HMB" spirit:name="bytelink" spirit:vendor="IDLAB" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_Eval_bl_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>GULF_bl</spirit:instanceName>
+        <spirit:componentRef spirit:library="HMB" spirit:name="bytelink" spirit:vendor="IDLAB" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_GULF_bl_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>GULF_Din_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="GULF_Din"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="txData8b"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GULF_Din_valid_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="GULF_Din_valid"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="txData8bValid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GULF_bl_dataOut</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="dataOut"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataIn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_bl_dataOut</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataOut"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="dataIn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_Din_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="Eval_Din"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="txData8b"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_Din_valid_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="Eval_Din_valid"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="txData8bValid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GULF_bl_rxData8bValid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="rxData8bValid"/>
+        <spirit:externalPortReference spirit:portRef="GULF_Dout_valid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GULF_bl_rxData8b</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="rxData8b"/>
+        <spirit:externalPortReference spirit:portRef="GULF_Dout"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_bl_rxData8bValid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="rxData8bValid"/>
+        <spirit:externalPortReference spirit:portRef="Eval_Dout_valid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_bl_rxData8b</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="rxData8b"/>
+        <spirit:externalPortReference spirit:portRef="Eval_Dout"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rst_i"/>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="sstRst"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="sstRst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_clk_5xsst</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_5xsst"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="sstX5Clk"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="sstX5Clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_clk_sst</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_sst"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="sstClk"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="sstClk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rstX5_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rstX5_i"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="ssX5rst"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="ssX5rst"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>
