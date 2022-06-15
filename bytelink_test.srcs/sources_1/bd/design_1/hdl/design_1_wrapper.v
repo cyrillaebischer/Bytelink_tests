@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Tue Jun 14 15:06:43 2022
+//Date        : Tue Jun 14 16:23:53 2022
 //Host        : LAPTOP-ISQIQK2U running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -17,7 +17,6 @@ module design_1_wrapper
     Eval_dataOut,
     GULF_Din,
     GULF_Din_valid,
-    GULF_dataIn,
     clk_i,
     rstX5_i,
     rst_i);
@@ -28,7 +27,6 @@ module design_1_wrapper
   output Eval_dataOut;
   input [7:0]GULF_Din;
   input GULF_Din_valid;
-  input GULF_dataIn;
   input clk_i;
   input rstX5_i;
   input rst_i;
@@ -40,7 +38,6 @@ module design_1_wrapper
   wire Eval_dataOut;
   wire [7:0]GULF_Din;
   wire GULF_Din_valid;
-  wire GULF_dataIn;
   wire clk_i;
   wire rstX5_i;
   wire rst_i;
@@ -53,7 +50,6 @@ module design_1_wrapper
         .Eval_dataOut(Eval_dataOut),
         .GULF_Din(GULF_Din),
         .GULF_Din_valid(GULF_Din_valid),
-        .GULF_dataIn(GULF_dataIn),
         .clk_i(clk_i),
         .rstX5_i(rstX5_i),
         .rst_i(rst_i));

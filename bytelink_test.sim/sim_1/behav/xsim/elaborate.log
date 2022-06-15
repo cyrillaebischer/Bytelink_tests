@@ -4,4 +4,44 @@ Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 325c49b1d1
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.utilitypkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture rtl of entity xil_defaultlib.Encode8b10b [encode8b10b_default]
+Compiling architecture rtl of entity xil_defaultlib.Decode8b10b [decode8b10b_default]
+Compiling architecture rtl of entity xil_defaultlib.ByteLink [bytelink_default]
+Compiling architecture iddr_v of entity unisim.IDDR [\IDDR(ddr_clk_edge="SAME_EDGE_PI...]
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_sync_stag...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_bhv_ver_a...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2_CONV_VER(...
+Compiling module fifo_generator_v13_2_2.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module fifo_generator_v13_2_2.fifo_generator_v13_2_2(C_DATA_CO...
+Compiling module xil_defaultlib.SerializationFifo
+Compiling architecture behavioral of entity xil_defaultlib.K7SerialInterfaceIn [k7serialinterfacein_default]
+Compiling architecture oddr_v of entity unisim.ODDR [\ODDR(srtype="ASYNC")(1,13)(1,5)...]
+Compiling architecture behavioral of entity xil_defaultlib.K7SerialInterfaceOut [k7serialinterfaceout_default]
+Compiling architecture rtl of entity xil_defaultlib.HMB_link [hmb_link_default]
+Compiling architecture design_1_eval_bl_0_arch of entity xil_defaultlib.design_1_Eval_bl_0 [design_1_eval_bl_0_default]
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.design_1_clk_wiz_0_0_clk_wiz
+Compiling module xil_defaultlib.design_1_clk_wiz_0_0
+Compiling architecture rtl of entity xil_defaultlib.custom_B_link [custom_b_link_default]
+Compiling architecture design_1_custom_b_link_0_0_arch of entity xil_defaultlib.design_1_custom_B_link_0_0 [design_1_custom_b_link_0_0_defau...]
+Compiling module xil_defaultlib.design_1
+Compiling architecture behavioral of entity xil_defaultlib.qbl_tb
+Built simulation snapshot qbl_tb_behav

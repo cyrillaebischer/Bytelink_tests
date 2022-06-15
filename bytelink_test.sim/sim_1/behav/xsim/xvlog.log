@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ip/design_1_Eval_bl_0/src/SerializationFifo/sim/SerializationFifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SerializationFifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
