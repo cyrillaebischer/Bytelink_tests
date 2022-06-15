@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Mon Jun 13 15:00:55 2022
+//Date        : Tue Jun 14 15:06:43 2022
 //Host        : LAPTOP-ISQIQK2U running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -15,10 +15,10 @@ module design_1
     Eval_Din_valid,
     Eval_Dout,
     Eval_Dout_valid,
+    Eval_dataOut,
     GULF_Din,
     GULF_Din_valid,
-    GULF_Dout,
-    GULF_Dout_valid,
+    GULF_dataIn,
     clk_i,
     rstX5_i,
     rst_i);
@@ -26,10 +26,10 @@ module design_1
   input Eval_Din_valid;
   output [7:0]Eval_Dout;
   output Eval_Dout_valid;
+  output Eval_dataOut;
   input [7:0]GULF_Din;
   input GULF_Din_valid;
-  output [7:0]GULF_Dout;
-  output GULF_Dout_valid;
+  input GULF_dataIn;
   input clk_i;
   input rstX5_i;
   input rst_i;
@@ -42,8 +42,6 @@ module design_1
   wire [7:0]GULF_Din_1;
   wire GULF_Din_valid_1;
   wire GULF_bl_dataOut;
-  wire [7:0]GULF_bl_rxData8b;
-  wire GULF_bl_rxData8bValid;
   wire clk_i_1;
   wire clk_wiz_0_clk_5xsst;
   wire clk_wiz_0_clk_sst;
@@ -54,10 +52,9 @@ module design_1
   assign Eval_Din_valid_1 = Eval_Din_valid;
   assign Eval_Dout[7:0] = Eval_bl_rxData8b;
   assign Eval_Dout_valid = Eval_bl_rxData8bValid;
+  assign Eval_dataOut = Eval_bl_dataOut;
   assign GULF_Din_1 = GULF_Din[7:0];
   assign GULF_Din_valid_1 = GULF_Din_valid;
-  assign GULF_Dout[7:0] = GULF_bl_rxData8b;
-  assign GULF_Dout_valid = GULF_bl_rxData8bValid;
   assign clk_i_1 = clk_i;
   assign rstX5_i_1 = rstX5_i;
   assign rst_i_1 = rst_i;
@@ -73,10 +70,8 @@ module design_1
         .txData8b(Eval_Din_1),
         .txData8bValid(Eval_Din_valid_1));
   design_1_GULF_bl_0 GULF_bl
-       (.dataIn(Eval_bl_dataOut),
+       (.dataIn(GULF_bl_dataOut),
         .dataOut(GULF_bl_dataOut),
-        .rxData8b(GULF_bl_rxData8b),
-        .rxData8bValid(GULF_bl_rxData8bValid),
         .ssX5rst(rstX5_i_1),
         .sstClk(clk_wiz_0_clk_sst),
         .sstRst(rst_i_1),

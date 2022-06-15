@@ -1,37 +1,35 @@
 {
    ExpandedHierarchyInLayout: "",
-   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port GULF_Din_valid -pg 1 -y 170 -defaultsOSRD
-preplace port GULF_Dout_valid -pg 1 -y -50 -defaultsOSRD
-preplace port rst_i -pg 1 -y -20 -defaultsOSRD
-preplace port rstX5_i -pg 1 -y 10 -defaultsOSRD
-preplace port Eval_Din_valid -pg 1 -y 240 -defaultsOSRD
-preplace port clk_i -pg 1 -y -50 -defaultsOSRD
-preplace port Eval_Dout_valid -pg 1 -y 50 -defaultsOSRD
-preplace portBus GULF_Din -pg 1 -y 90 -defaultsOSRD
-preplace portBus Eval_Dout -pg 1 -y 30 -defaultsOSRD
-preplace portBus GULF_Dout -pg 1 -y -70 -defaultsOSRD
-preplace portBus Eval_Din -pg 1 -y 200 -defaultsOSRD
-preplace inst Eval_bl -pg 1 -lvl 3 -y 60 -defaultsOSRD
-preplace inst GULF_bl -pg 1 -lvl 2 -y 50 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 30 -defaultsOSRD
-preplace netloc rstX5_i_1 1 0 3 0J -50 220 -80 550
-preplace netloc GULF_Din_valid_1 1 0 2 N 170 210
-preplace netloc GULF_bl_rxData8bValid 1 2 2 540 -60 840J
-preplace netloc Eval_bl_dataOut 1 1 3 240J 180 NJ 180 840
-preplace netloc rst_i_1 1 0 3 10 -40 240 -70 510
-preplace netloc Eval_bl_rxData8bValid 1 3 1 860
-preplace netloc Eval_Din_valid_1 1 0 3 NJ 240 N 240 580
-preplace netloc clk_i_1 1 0 1 -10
-preplace netloc GULF_bl_rxData8b 1 2 2 520 -70 NJ
-preplace netloc GULF_bl_dataOut 1 2 1 530
-preplace netloc GULF_Din_1 1 0 2 0 100 220
-preplace netloc Eval_bl_rxData8b 1 3 1 850
-preplace netloc clk_wiz_0_clk_sst 1 1 2 230 170 560
-preplace netloc clk_wiz_0_clk_5xsst 1 1 2 210 -90 580
-preplace netloc Eval_Din_1 1 0 3 NJ 200 N 200 570
-levelinfo -pg 1 -30 120 380 710 880 -top -100 -bot 400
+preplace port GULF_Din_valid -pg 1 -y 180 -defaultsOSRD
+preplace port Eval_dataOut -pg 1 -y 280 -defaultsOSRD
+preplace port GULF_dataIn -pg 1 -y 20 -defaultsOSRD
+preplace port rst_i -pg 1 -y 380 -defaultsOSRD
+preplace port rstX5_i -pg 1 -y 120 -defaultsOSRD
+preplace port Eval_Din_valid -pg 1 -y 360 -defaultsOSRD
+preplace port clk_i -pg 1 -y 450 -defaultsOSRD
+preplace port Eval_Dout_valid -pg 1 -y 320 -defaultsOSRD
+preplace portBus GULF_Din -pg 1 -y 160 -defaultsOSRD
+preplace portBus Eval_Dout -pg 1 -y 300 -defaultsOSRD
+preplace portBus Eval_Din -pg 1 -y 340 -defaultsOSRD
+preplace inst Eval_bl -pg 1 -lvl 3 -y 300 -defaultsOSRD
+preplace inst GULF_bl -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 440 -defaultsOSRD
+preplace netloc rstX5_i_1 1 0 3 NJ 120 210 300 NJ
+preplace netloc GULF_Din_valid_1 1 0 2 NJ 180 NJ
+preplace netloc Eval_bl_dataOut 1 3 1 NJ
+preplace netloc rst_i_1 1 0 3 20 260 220 260 NJ
+preplace netloc Eval_bl_rxData8bValid 1 3 1 NJ
+preplace netloc Eval_Din_valid_1 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc GULF_bl_dataOut 1 1 2 240 240 500
+preplace netloc clk_i_1 1 0 1 NJ
+preplace netloc GULF_Din_1 1 0 2 NJ 160 NJ
+preplace netloc Eval_bl_rxData8b 1 3 1 NJ
+preplace netloc clk_wiz_0_clk_sst 1 1 2 200 250 510J
+preplace netloc clk_wiz_0_clk_5xsst 1 1 2 230 280 NJ
+preplace netloc Eval_Din_1 1 0 3 NJ 340 NJ 340 NJ
+levelinfo -pg 1 0 110 370 640 790 -top 0 -bot 510
 ",
 }
 0

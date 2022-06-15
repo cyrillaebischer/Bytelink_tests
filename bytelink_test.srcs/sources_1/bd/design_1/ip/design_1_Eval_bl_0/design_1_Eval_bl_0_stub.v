@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Mon Jun 13 15:20:04 2022
+// Date        : Tue Jun 14 12:54:35 2022
 // Host        : LAPTOP-ISQIQK2U running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.srcs/sources_1/bd/design_1/ip/design_1_Eval_bl_0/design_1_Eval_bl_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_Eval_bl_0 -prefix
+//               design_1_Eval_bl_0_ design_1_Eval_bl_0_stub.v
 // Design      : design_1_Eval_bl_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-3

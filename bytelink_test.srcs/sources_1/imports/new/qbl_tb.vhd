@@ -45,8 +45,7 @@ component design_1 is
     Eval_Dout_valid : out STD_LOGIC;
     GULF_Din : in STD_LOGIC_VECTOR ( 7 downto 0 );
     GULF_Din_valid : in STD_LOGIC;
-    GULF_Dout_valid : out STD_LOGIC;
-    GULF_dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    GULF_dataIn : in std_logic;
     clk_i   : in std_logic;
     rst_i : in std_logic;
     rstX5_i : in std_logic
@@ -60,6 +59,7 @@ signal Eval_Dout_valid : std_logic ;
 
 signal GULF_Din :  std_logic_vector (7 downto 0 ) := (others => '0');
 signal GULF_Din_valid : std_logic := '0';
+signal GULF_dataIn    : std_logic;
 
 signal Eval_Din: std_logic_vector (7 downto 0):= (others => '0');
 signal Eval_Din_valid : std_logic := '0' ;
@@ -70,10 +70,9 @@ begin
 
 uut: design_1 port map (
 
-    GULF_DOut_valid => GULF_DOut_valid,
-    GULF_Dout => GULF_Dout,
     GULF_Din => GULF_Din,
     GULF_Din_Valid => GULF_Din_Valid,
+    GULF_dataIn  => gulf_dataIn,
     Eval_DOut => Eval_DOut,
     Eval_Din => Eval_Din,
     Eval_Din_Valid => Eval_Din_Valid,
@@ -88,33 +87,33 @@ stim_proc: process
 begin
 wait for 1 ns;
 	
-wait for 46 us;
+wait for 45 us;
 GULF_Din <= x"AB";
 GULF_Din_Valid <= '1';
 
-wait for 1 us;
-GULF_Din <= x"CD";
-GULF_Din_Valid <= '1';
+--wait for 1 us;
+--GULF_Din <= x"CD";
+--GULF_Din_Valid <= '1';
 
-wait for 1 us;
-GULF_Din <= x"EF";
-GULF_Din_Valid <= '1';
+--wait for 1 us;
+--GULF_Din <= x"EF";
+--GULF_Din_Valid <= '1';
 
-wait for 1 us;
-GULF_Din_Valid <= '0';
+--wait for 1 us;
+--GULF_Din_Valid <= '0';
 
-wait for 10 us;
-Eval_Din <= x"BB";
-Eval_Din_Valid <= '1';
+--wait for 10 us;
+--Eval_Din <= x"BB";
+--Eval_Din_Valid <= '1';
 
-wait for 1 us;
-Eval_Din <= x"DD";
-Eval_Din_Valid <= '1';
-wait for 1 us;
-Eval_Din <= x"FF";
-Eval_Din_Valid <= '1';
-wait for 1 us;
-Eval_Din_Valid <= '0';
+--wait for 1 us;
+--Eval_Din <= x"DD";
+--Eval_Din_Valid <= '1';
+--wait for 1 us;
+--Eval_Din <= x"FF";
+--Eval_Din_Valid <= '1';
+--wait for 1 us;
+--Eval_Din_Valid <= '0';
 
 end process; 
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 13 15:00:59 2022" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 14 15:06:44 2022" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-3"/>
 
@@ -22,16 +22,6 @@
     <PORT DIR="I" NAME="Eval_Din_valid" SIGIS="undef" SIGNAME="External_Ports_Eval_Din_valid">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Eval_bl" PORT="txData8bValid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="GULF_Dout_valid" SIGIS="undef" SIGNAME="GULF_bl_rxData8bValid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GULF_bl" PORT="rxData8bValid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="7" NAME="GULF_Dout" RIGHT="0" SIGIS="undef" SIGNAME="GULF_bl_rxData8b">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GULF_bl" PORT="rxData8b"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="Eval_Dout_valid" SIGIS="undef" SIGNAME="Eval_bl_rxData8bValid">
@@ -60,6 +50,12 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="Eval_bl" PORT="ssX5rst"/>
         <CONNECTION INSTANCE="GULF_bl" PORT="ssX5rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="GULF_dataIn" SIGIS="undef"/>
+    <PORT DIR="O" NAME="Eval_dataOut" SIGIS="undef" SIGNAME="Eval_bl_dataOut">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Eval_bl" PORT="dataOut"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -101,7 +97,7 @@
         </PORT>
         <PORT DIR="O" NAME="dataOut" SIGIS="undef" SIGNAME="Eval_bl_dataOut">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GULF_bl" PORT="dataIn"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Eval_dataOut"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="rxData8b" RIGHT="0" SIGIS="undef" SIGNAME="Eval_bl_rxData8b">
@@ -154,26 +150,19 @@
             <CONNECTION INSTANCE="External_Ports" PORT="rstX5_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="dataIn" SIGIS="undef" SIGNAME="Eval_bl_dataOut">
+        <PORT DIR="I" NAME="dataIn" SIGIS="undef" SIGNAME="GULF_bl_dataOut">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Eval_bl" PORT="dataOut"/>
+            <CONNECTION INSTANCE="GULF_bl" PORT="dataOut"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dataOut" SIGIS="undef" SIGNAME="GULF_bl_dataOut">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Eval_bl" PORT="dataIn"/>
+            <CONNECTION INSTANCE="GULF_bl" PORT="dataIn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="rxData8b" RIGHT="0" SIGIS="undef" SIGNAME="GULF_bl_rxData8b">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GULF_Dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="rxData8bValid" SIGIS="undef" SIGNAME="GULF_bl_rxData8bValid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GULF_Dout_valid"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="rxData8b" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="rxData8bValid" SIGIS="undef"/>
         <PORT DIR="I" LEFT="7" NAME="txData8b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GULF_Din">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="GULF_Din"/>

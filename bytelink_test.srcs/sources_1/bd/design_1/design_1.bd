@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xA4C59F20C4550A9D" bd:device="xc7z020clg400-3" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x49FAA5FFEF3113B1" bd:device="xc7z020clg400-3" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -54,22 +54,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>GULF_Dout_valid</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>GULF_Dout</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>7</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>Eval_Dout_valid</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
@@ -101,6 +85,18 @@
           <spirit:name>rstX5_i</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>GULF_dataIn</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>Eval_dataOut</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -160,16 +156,6 @@
         <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="txData8bValid"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>GULF_bl_dataOut</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="dataOut"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataIn"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Eval_bl_dataOut</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataOut"/>
-        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="dataIn"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>Eval_Din_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="Eval_Din"/>
         <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="txData8b"/>
@@ -178,16 +164,6 @@
         <spirit:name>Eval_Din_valid_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="Eval_Din_valid"/>
         <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="txData8bValid"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>GULF_bl_rxData8bValid</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="rxData8bValid"/>
-        <spirit:externalPortReference spirit:portRef="GULF_Dout_valid"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>GULF_bl_rxData8b</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="rxData8b"/>
-        <spirit:externalPortReference spirit:portRef="GULF_Dout"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Eval_bl_rxData8bValid</spirit:name>
@@ -228,6 +204,17 @@
         <spirit:externalPortReference spirit:portRef="rstX5_i"/>
         <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="ssX5rst"/>
         <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="ssX5rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_bl_dataOut</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataOut"/>
+        <spirit:externalPortReference spirit:portRef="Eval_dataOut"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GULF_bl_dataOut</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="dataOut"/>
+        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataIn"/>
+        <spirit:internalPortReference spirit:componentRef="GULF_bl" spirit:portRef="dataIn"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="33057450000fs"></ZoomStartTime>
-      <ZoomEndTime time="33312346027fs"></ZoomEndTime>
-      <Cursor1Time time="33491000000fs"></Cursor1Time>
+      <ZoomStartTime time="58514570000fs"></ZoomStartTime>
+      <ZoomEndTime time="59349761238fs"></ZoomEndTime>
+      <Cursor1Time time="59001000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="181"></NameColumnWidth>
-      <ValueColumnWidth column_width="109"></ValueColumnWidth>
+      <NameColumnWidth column_width="174"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="21" />
    <wvobject type="divider" fp_name="divider49">
@@ -66,6 +66,10 @@
       <obj_property name="ElementShortName">.state</obj_property>
       <obj_property name="ObjectShortName">.state</obj_property>
    </wvobject>
+   <wvobject fp_name="/qbl_tb/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
    <wvobject type="divider" fp_name="divider50">
       <obj_property name="label">Eval BL</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -86,10 +90,6 @@
       <obj_property name="ElementShortName">rstX5_i</obj_property>
       <obj_property name="ObjectShortName">rstX5_i</obj_property>
    </wvobject>
-   <wvobject fp_name="/qbl_tb/clk_i" type="logic">
-      <obj_property name="ElementShortName">clk_i</obj_property>
-      <obj_property name="ObjectShortName">clk_i</obj_property>
-   </wvobject>
    <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.state" type="other">
       <obj_property name="ElementShortName">.state</obj_property>
       <obj_property name="ObjectShortName">.state</obj_property>
@@ -101,7 +101,6 @@
    <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r" type="array">
       <obj_property name="ElementShortName">r</obj_property>
       <obj_property name="ObjectShortName">r</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.state" type="other">
          <obj_property name="ElementShortName">.state</obj_property>
          <obj_property name="ObjectShortName">.state</obj_property>
@@ -139,6 +138,42 @@
          <obj_property name="ElementShortName">.alignCnt[31:0]</obj_property>
          <obj_property name="ObjectShortName">.alignCnt[31:0]</obj_property>
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.state" type="other">
+         <obj_property name="ElementShortName">.state</obj_property>
+         <obj_property name="ObjectShortName">.state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.aligned" type="logic">
+         <obj_property name="ElementShortName">.aligned</obj_property>
+         <obj_property name="ObjectShortName">.aligned</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.rxData10b" type="array">
+         <obj_property name="ElementShortName">.rxData10b[9:0]</obj_property>
+         <obj_property name="ObjectShortName">.rxData10b[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.rxData8b" type="array">
+         <obj_property name="ElementShortName">.rxData8b[7:0]</obj_property>
+         <obj_property name="ObjectShortName">.rxData8b[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.rxData8bValid" type="logic">
+         <obj_property name="ElementShortName">.rxData8bValid</obj_property>
+         <obj_property name="ObjectShortName">.rxData8bValid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.txData8b" type="array">
+         <obj_property name="ElementShortName">.txData8b[7:0]</obj_property>
+         <obj_property name="ObjectShortName">.txData8b[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.txDataK" type="logic">
+         <obj_property name="ElementShortName">.txDataK</obj_property>
+         <obj_property name="ObjectShortName">.txDataK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.txData10b" type="array">
+         <obj_property name="ElementShortName">.txData10b[9:0]</obj_property>
+         <obj_property name="ObjectShortName">.txData10b[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/r.alignCnt" type="array">
+         <obj_property name="ElementShortName">.alignCnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">.alignCnt[31:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="/qbl_tb/uut/Eval_bl/U0/U_bytelink/txData10b" type="array">
