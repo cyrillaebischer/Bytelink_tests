@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xBDC995167E1CD82B" bd:device="xc7z020clg400-3" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xBDC99516F81173F8" bd:device="xc7z020clg400-3" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -66,6 +66,18 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
+          <spirit:name>rstX5_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rst_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>GULF_Din</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -77,18 +89,6 @@
         </spirit:port>
         <spirit:port>
           <spirit:name>GULF_Din_valid</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>rstX5_i</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>rst_i</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
@@ -124,89 +124,90 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Eval_bl</spirit:instanceName>
+        <spirit:instanceName>bytelink_Eval</spirit:instanceName>
         <spirit:componentRef spirit:library="HMB" spirit:name="bytelink" spirit:vendor="IDLAB" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_Eval_bl_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_bytelink_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>custom_B_link_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="custom_B_link" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>ByteLinkGulfv2_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="ByteLinkGulfv2" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_custom_B_link_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ByteLinkGulfv2_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>Eval_Din_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="Eval_Din"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="txData8b"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Eval_Din_valid_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="Eval_Din_valid"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="txData8bValid"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Eval_bl_rxData8bValid</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="rxData8bValid"/>
-        <spirit:externalPortReference spirit:portRef="Eval_Dout_valid"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Eval_bl_rxData8b</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="rxData8b"/>
-        <spirit:externalPortReference spirit:portRef="Eval_Dout"/>
-      </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_i_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>Eval_bl_dataOut</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataOut"/>
-        <spirit:externalPortReference spirit:portRef="Eval_dataOut"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>GULF_Din_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="GULF_Din"/>
-        <spirit:internalPortReference spirit:componentRef="custom_B_link_0" spirit:portRef="txData8b"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>GULF_Din_valid_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="GULF_Din_valid"/>
-        <spirit:internalPortReference spirit:componentRef="custom_B_link_0" spirit:portRef="txData8bValid"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>rstX5_i_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="rstX5_i"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="ssX5rst"/>
-        <spirit:internalPortReference spirit:componentRef="custom_B_link_0" spirit:portRef="ssX5rst"/>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="ssX5rst"/>
+        <spirit:internalPortReference spirit:componentRef="ByteLinkGulfv2_0" spirit:portRef="ssX5rst"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_5xsst</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_5xsst"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="sstX5Clk"/>
-        <spirit:internalPortReference spirit:componentRef="custom_B_link_0" spirit:portRef="sstX5Clk"/>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="sstX5Clk"/>
+        <spirit:internalPortReference spirit:componentRef="ByteLinkGulfv2_0" spirit:portRef="sstX5Clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_sst</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_sst"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="sstClk"/>
-        <spirit:internalPortReference spirit:componentRef="custom_B_link_0" spirit:portRef="sstClk"/>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="sstClk"/>
+        <spirit:internalPortReference spirit:componentRef="ByteLinkGulfv2_0" spirit:portRef="sstClk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_i_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="rst_i"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="sstRst"/>
-        <spirit:internalPortReference spirit:componentRef="custom_B_link_0" spirit:portRef="sstRst"/>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="sstRst"/>
+        <spirit:internalPortReference spirit:componentRef="ByteLinkGulfv2_0" spirit:portRef="sstRst"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>custom_B_link_0_dataOut</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="custom_B_link_0" spirit:portRef="dataOut"/>
-        <spirit:internalPortReference spirit:componentRef="Eval_bl" spirit:portRef="dataIn"/>
+        <spirit:name>GULF_Din_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="GULF_Din"/>
+        <spirit:internalPortReference spirit:componentRef="ByteLinkGulfv2_0" spirit:portRef="txData8b"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GULF_Din_valid_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="GULF_Din_valid"/>
+        <spirit:internalPortReference spirit:componentRef="ByteLinkGulfv2_0" spirit:portRef="txData8bValid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bytelink_0_dataOut</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="dataOut"/>
+        <spirit:externalPortReference spirit:portRef="Eval_dataOut"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bytelink_0_rxData8b</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="rxData8b"/>
+        <spirit:externalPortReference spirit:portRef="Eval_Dout"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bytelink_0_rxData8bValid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="rxData8bValid"/>
+        <spirit:externalPortReference spirit:portRef="Eval_Dout_valid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ByteLinkGulfv2_0_dataOut</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ByteLinkGulfv2_0" spirit:portRef="dataOut"/>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="dataIn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_Din_valid_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="Eval_Din_valid"/>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="txData8bValid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Eval_Din_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="Eval_Din"/>
+        <spirit:internalPortReference spirit:componentRef="bytelink_Eval" spirit:portRef="txData8b"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

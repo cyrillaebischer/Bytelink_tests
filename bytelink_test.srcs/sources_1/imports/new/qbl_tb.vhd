@@ -43,9 +43,8 @@ component design_1 is
     Eval_Din_valid : in STD_LOGIC;
     Eval_Dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Eval_Dout_valid : out STD_LOGIC;
-    GULF_Din : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    GULF_Din_valid : in STD_LOGIC;
-    GULF_dataIn : in std_logic;
+    GULF_Din : in std_logic_vector( 7 downto 0);
+    GULF_Din_valid : in std_logic;
     clk_i   : in std_logic;
     rst_i : in std_logic;
     rstX5_i : in std_logic
@@ -72,7 +71,6 @@ uut: design_1 port map (
 
     GULF_Din => GULF_Din,
     GULF_Din_Valid => GULF_Din_Valid,
-    GULF_dataIn  => gulf_dataIn,
     Eval_DOut => Eval_DOut,
     Eval_Din => Eval_Din,
     Eval_Din_Valid => Eval_Din_Valid,
@@ -91,13 +89,20 @@ wait for 45 us;
 GULF_Din <= x"AB";
 GULF_Din_Valid <= '1';
 
---wait for 1 us;
---GULF_Din <= x"CD";
---GULF_Din_Valid <= '1';
+wait for 1 us;
+GULF_Din <= x"CD";
+GULF_Din_Valid <= '1';
 
---wait for 1 us;
---GULF_Din <= x"EF";
---GULF_Din_Valid <= '1';
+wait for 1 us;
+GULF_Din <= x"EF";
+GULF_Din_Valid <= '1';
+
+wait for 1 us;
+GULF_Din <= x"00";
+GULF_Din_Valid <= '1';
+
+wait for 4 us;
+GULF_Din_Valid <= '0';
 
 --wait for 1 us;
 --GULF_Din_Valid <= '0';

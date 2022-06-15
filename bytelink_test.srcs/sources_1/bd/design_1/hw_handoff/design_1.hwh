@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 14 16:23:53 2022" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 15 10:55:33 2022" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-3"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" LEFT="7" NAME="Eval_Din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Eval_Din">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Eval_bl" PORT="txData8b"/>
+        <CONNECTION INSTANCE="bytelink_Eval" PORT="txData8b"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Eval_Din_valid" SIGIS="undef" SIGNAME="External_Ports_Eval_Din_valid">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Eval_bl" PORT="txData8bValid"/>
+        <CONNECTION INSTANCE="bytelink_Eval" PORT="txData8bValid"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="Eval_Dout_valid" SIGIS="undef" SIGNAME="Eval_bl_rxData8bValid">
+    <PORT DIR="O" NAME="Eval_Dout_valid" SIGIS="undef" SIGNAME="bytelink_Eval_rxData8bValid">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Eval_bl" PORT="rxData8bValid"/>
+        <CONNECTION INSTANCE="bytelink_Eval" PORT="rxData8bValid"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="7" NAME="Eval_Dout" RIGHT="0" SIGIS="undef" SIGNAME="Eval_bl_rxData8b">
+    <PORT DIR="O" LEFT="7" NAME="Eval_Dout" RIGHT="0" SIGIS="undef" SIGNAME="bytelink_Eval_rxData8b">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Eval_bl" PORT="rxData8b"/>
+        <CONNECTION INSTANCE="bytelink_Eval" PORT="rxData8b"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="clk_i" SIGIS="undef" SIGNAME="External_Ports_clk_i">
@@ -29,31 +29,32 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="Eval_dataOut" SIGIS="undef" SIGNAME="Eval_bl_dataOut">
+    <PORT DIR="O" NAME="Eval_dataOut" SIGIS="undef" SIGNAME="bytelink_Eval_dataOut">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Eval_bl" PORT="dataOut"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="7" NAME="GULF_Din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GULF_Din">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="custom_B_link_0" PORT="txData8b"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="GULF_Din_valid" SIGIS="undef" SIGNAME="External_Ports_GULF_Din_valid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="custom_B_link_0" PORT="txData8bValid"/>
+        <CONNECTION INSTANCE="bytelink_Eval" PORT="dataOut"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rstX5_i" SIGIS="undef" SIGNAME="External_Ports_rstX5_i">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Eval_bl" PORT="ssX5rst"/>
-        <CONNECTION INSTANCE="custom_B_link_0" PORT="ssX5rst"/>
+        <CONNECTION INSTANCE="bytelink_Eval" PORT="ssX5rst"/>
+        <CONNECTION INSTANCE="ByteLinkGulfv2_0" PORT="ssX5rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rst_i" SIGIS="undef" SIGNAME="External_Ports_rst_i">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Eval_bl" PORT="sstRst"/>
-        <CONNECTION INSTANCE="custom_B_link_0" PORT="sstRst"/>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
+        <CONNECTION INSTANCE="bytelink_Eval" PORT="sstRst"/>
+        <CONNECTION INSTANCE="ByteLinkGulfv2_0" PORT="sstRst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="GULF_Din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GULF_Din">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ByteLinkGulfv2_0" PORT="txData8b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="GULF_Din_valid" SIGIS="undef" SIGNAME="External_Ports_GULF_Din_valid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ByteLinkGulfv2_0" PORT="txData8bValid"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -61,10 +62,10 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE FULLNAME="/Eval_bl" HWVERSION="1.0" INSTANCE="Eval_bl" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bytelink" VLNV="IDLAB:HMB:bytelink:1.0">
+    <MODULE FULLNAME="/ByteLinkGulfv2_0" HWVERSION="1.0" INSTANCE="ByteLinkGulfv2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ByteLinkGulfv2" VLNV="xilinx.com:user:ByteLinkGulfv2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_Eval_bl_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ByteLinkGulfv2_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -88,22 +89,67 @@
             <CONNECTION INSTANCE="External_Ports" PORT="rstX5_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="dataIn" SIGIS="undef" SIGNAME="custom_B_link_0_dataOut">
+        <PORT DIR="O" NAME="dataOut" SIGIS="undef" SIGNAME="ByteLinkGulfv2_0_dataOut">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="custom_B_link_0" PORT="dataOut"/>
+            <CONNECTION INSTANCE="bytelink_Eval" PORT="dataIn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dataOut" SIGIS="undef" SIGNAME="Eval_bl_dataOut">
+        <PORT DIR="I" LEFT="7" NAME="txData8b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GULF_Din">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GULF_Din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="txData8bValid" SIGIS="undef" SIGNAME="External_Ports_GULF_Din_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GULF_Din_valid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/bytelink_Eval" HWVERSION="1.0" INSTANCE="bytelink_Eval" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bytelink" VLNV="IDLAB:HMB:bytelink:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_bytelink_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sstClk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_sst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_sst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sstRst" SIGIS="undef" SIGNAME="External_Ports_rst_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sstX5Clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_5xsst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_5xsst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ssX5rst" SIGIS="undef" SIGNAME="External_Ports_rstX5_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rstX5_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dataIn" SIGIS="undef" SIGNAME="ByteLinkGulfv2_0_dataOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ByteLinkGulfv2_0" PORT="dataOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dataOut" SIGIS="undef" SIGNAME="bytelink_Eval_dataOut">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Eval_dataOut"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="rxData8b" RIGHT="0" SIGIS="undef" SIGNAME="Eval_bl_rxData8b">
+        <PORT DIR="O" LEFT="7" NAME="rxData8b" RIGHT="0" SIGIS="undef" SIGNAME="bytelink_Eval_rxData8b">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Eval_Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="rxData8bValid" SIGIS="undef" SIGNAME="Eval_bl_rxData8bValid">
+        <PORT DIR="O" NAME="rxData8bValid" SIGIS="undef" SIGNAME="bytelink_Eval_rxData8bValid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Eval_Dout_valid"/>
           </CONNECTIONS>
@@ -691,7 +737,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="reset" SIGIS="rst"/>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_rst_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_i"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk_i">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk_i"/>
@@ -699,59 +749,14 @@
         </PORT>
         <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_sst" SIGIS="clk" SIGNAME="clk_wiz_0_clk_sst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Eval_bl" PORT="sstClk"/>
-            <CONNECTION INSTANCE="custom_B_link_0" PORT="sstClk"/>
+            <CONNECTION INSTANCE="bytelink_Eval" PORT="sstClk"/>
+            <CONNECTION INSTANCE="ByteLinkGulfv2_0" PORT="sstClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="125000000" DIR="O" NAME="clk_5xsst" SIGIS="clk" SIGNAME="clk_wiz_0_clk_5xsst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Eval_bl" PORT="sstX5Clk"/>
-            <CONNECTION INSTANCE="custom_B_link_0" PORT="sstX5Clk"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE FULLNAME="/custom_B_link_0" HWVERSION="1.0" INSTANCE="custom_B_link_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="custom_B_link" VLNV="xilinx.com:user:custom_B_link:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_custom_B_link_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="sstClk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_sst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_sst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="sstRst" SIGIS="undef" SIGNAME="External_Ports_rst_i">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="sstX5Clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_5xsst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_5xsst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ssX5rst" SIGIS="undef" SIGNAME="External_Ports_rstX5_i">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rstX5_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dataOut" SIGIS="undef" SIGNAME="custom_B_link_0_dataOut">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Eval_bl" PORT="dataIn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="txData8b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GULF_Din">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GULF_Din"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="txData8bValid" SIGIS="undef" SIGNAME="External_Ports_GULF_Din_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="GULF_Din_valid"/>
+            <CONNECTION INSTANCE="bytelink_Eval" PORT="sstX5Clk"/>
+            <CONNECTION INSTANCE="ByteLinkGulfv2_0" PORT="sstX5Clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

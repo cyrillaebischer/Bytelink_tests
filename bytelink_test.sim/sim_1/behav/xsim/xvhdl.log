@@ -1,4 +1,11 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ipshared/b2e4/sim/TopBytelink.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity custom_B_link
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ip/design_1_custom_B_link_0_0/sim/design_1_custom_B_link_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity design_1_custom_B_link_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ipshared/7dbb/bytelink_gulf_v2/bytelink_gulf_v2.srcs/sources_1/imports/src/UtilityPkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ipshared/7dbb/bytelink_gulf_v2/bytelink_gulf_v2.srcs/sources_1/imports/src/Encode8b10b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Encode8b10b
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ipshared/7dbb/bytelink_gulf_v2/bytelink_gulf_v2.srcs/sources_1/imports/src/ByteLinkGulf.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ByteLinkGulf
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ipshared/7dbb/bytelink_gulf_v2/bytelink_gulf_v2.srcs/sources_1/imports/src/K7SerialInterfaceOut.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity K7SerialInterfaceOut
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ipshared/7dbb/bytelink_gulf_v2/bytelink_gulf_v2.srcs/sources_1/imports/src/TopBytelink.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ByteLinkGulfv2
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Cyrill/Documents/S6/BA-GULFstream/bytelink_test_shivang/bytelink_test/bytelink_test.ip_user_files/bd/design_1/ip/design_1_ByteLinkGulfv2_0_1/sim/design_1_ByteLinkGulfv2_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_ByteLinkGulfv2_0_1

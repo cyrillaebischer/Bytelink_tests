@@ -168,8 +168,11 @@ proc create_root_design { parentCell } {
   set rstX5_i [ create_bd_port -dir I rstX5_i ]
   set rst_i [ create_bd_port -dir I rst_i ]
 
-  # Create instance: Eval_bl, and set properties
-  set Eval_bl [ create_bd_cell -type ip -vlnv IDLAB:HMB:bytelink:1.0 Eval_bl ]
+  # Create instance: ByteLinkGulfv2_0, and set properties
+  set ByteLinkGulfv2_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:ByteLinkGulfv2:1.0 ByteLinkGulfv2_0 ]
+
+  # Create instance: bytelink_Eval, and set properties
+  set bytelink_Eval [ create_bd_cell -type ip -vlnv IDLAB:HMB:bytelink:1.0 bytelink_Eval ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
@@ -189,23 +192,20 @@ proc create_root_design { parentCell } {
    CONFIG.USE_LOCKED {false} \
  ] $clk_wiz_0
 
-  # Create instance: custom_B_link_0, and set properties
-  set custom_B_link_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:custom_B_link:1.0 custom_B_link_0 ]
-
   # Create port connections
-  connect_bd_net -net Eval_Din_1 [get_bd_ports Eval_Din] [get_bd_pins Eval_bl/txData8b]
-  connect_bd_net -net Eval_Din_valid_1 [get_bd_ports Eval_Din_valid] [get_bd_pins Eval_bl/txData8bValid]
-  connect_bd_net -net Eval_bl_dataOut [get_bd_ports Eval_dataOut] [get_bd_pins Eval_bl/dataOut]
-  connect_bd_net -net Eval_bl_rxData8b [get_bd_ports Eval_Dout] [get_bd_pins Eval_bl/rxData8b]
-  connect_bd_net -net Eval_bl_rxData8bValid [get_bd_ports Eval_Dout_valid] [get_bd_pins Eval_bl/rxData8bValid]
-  connect_bd_net -net GULF_Din_1 [get_bd_ports GULF_Din] [get_bd_pins custom_B_link_0/txData8b]
-  connect_bd_net -net GULF_Din_valid_1 [get_bd_ports GULF_Din_valid] [get_bd_pins custom_B_link_0/txData8bValid]
+  connect_bd_net -net ByteLinkGulfv2_0_dataOut [get_bd_pins ByteLinkGulfv2_0/dataOut] [get_bd_pins bytelink_Eval/dataIn]
+  connect_bd_net -net Eval_Din_1 [get_bd_ports Eval_Din] [get_bd_pins bytelink_Eval/txData8b]
+  connect_bd_net -net Eval_Din_valid_1 [get_bd_ports Eval_Din_valid] [get_bd_pins bytelink_Eval/txData8bValid]
+  connect_bd_net -net GULF_Din_1 [get_bd_ports GULF_Din] [get_bd_pins ByteLinkGulfv2_0/txData8b]
+  connect_bd_net -net GULF_Din_valid_1 [get_bd_ports GULF_Din_valid] [get_bd_pins ByteLinkGulfv2_0/txData8bValid]
+  connect_bd_net -net bytelink_0_dataOut [get_bd_ports Eval_dataOut] [get_bd_pins bytelink_Eval/dataOut]
+  connect_bd_net -net bytelink_0_rxData8b [get_bd_ports Eval_Dout] [get_bd_pins bytelink_Eval/rxData8b]
+  connect_bd_net -net bytelink_0_rxData8bValid [get_bd_ports Eval_Dout_valid] [get_bd_pins bytelink_Eval/rxData8bValid]
   connect_bd_net -net clk_i_1 [get_bd_ports clk_i] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_5xsst [get_bd_pins Eval_bl/sstX5Clk] [get_bd_pins clk_wiz_0/clk_5xsst] [get_bd_pins custom_B_link_0/sstX5Clk]
-  connect_bd_net -net clk_wiz_0_clk_sst [get_bd_pins Eval_bl/sstClk] [get_bd_pins clk_wiz_0/clk_sst] [get_bd_pins custom_B_link_0/sstClk]
-  connect_bd_net -net custom_B_link_0_dataOut [get_bd_pins Eval_bl/dataIn] [get_bd_pins custom_B_link_0/dataOut]
-  connect_bd_net -net rstX5_i_1 [get_bd_ports rstX5_i] [get_bd_pins Eval_bl/ssX5rst] [get_bd_pins custom_B_link_0/ssX5rst]
-  connect_bd_net -net rst_i_1 [get_bd_ports rst_i] [get_bd_pins Eval_bl/sstRst] [get_bd_pins custom_B_link_0/sstRst]
+  connect_bd_net -net clk_wiz_0_clk_5xsst [get_bd_pins ByteLinkGulfv2_0/sstX5Clk] [get_bd_pins bytelink_Eval/sstX5Clk] [get_bd_pins clk_wiz_0/clk_5xsst]
+  connect_bd_net -net clk_wiz_0_clk_sst [get_bd_pins ByteLinkGulfv2_0/sstClk] [get_bd_pins bytelink_Eval/sstClk] [get_bd_pins clk_wiz_0/clk_sst]
+  connect_bd_net -net rstX5_i_1 [get_bd_ports rstX5_i] [get_bd_pins ByteLinkGulfv2_0/ssX5rst] [get_bd_pins bytelink_Eval/ssX5rst]
+  connect_bd_net -net rst_i_1 [get_bd_ports rst_i] [get_bd_pins ByteLinkGulfv2_0/sstRst] [get_bd_pins bytelink_Eval/sstRst] [get_bd_pins clk_wiz_0/reset]
 
   # Create address segments
 
